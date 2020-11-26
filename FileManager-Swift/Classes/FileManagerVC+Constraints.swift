@@ -22,7 +22,7 @@ extension FileManagerVC {
     
     func configuerCollectionView() -> UICollectionView {
         let flow = UICollectionViewFlowLayout()
-        flow.sectionInset = UIEdgeInsetsMake(14, 20, 14, 20)
+        flow.sectionInset = UIEdgeInsets.init(top: 14, left: 20, bottom: 14, right: 20)
         //let width = UIScreen.main.bounds.size.width
         //flow?.itemSize = CGSize(width: width/3, height: width/3)
         flow.itemSize = CGSize(width: 140, height: 140)
@@ -143,9 +143,9 @@ extension FileManagerVC {
 @available(iOS 9.0, *)
 public extension UIImage {
     static func make(name: String) -> UIImage? {
-        let bundle = Bundle(for: FileManagerVC.self)
+        _ = Bundle(for: FileManagerVC.self)
         
-        debugFM("\(contentsOfDirectoryAtPath(path: "\(Bundle(for: FileManagerVC.self).bundlePath)"))")
+        debugFM("\(String(describing: contentsOfDirectoryAtPath(path: "\(Bundle(for: FileManagerVC.self).bundlePath)")))")
         debugFM("\(Bundle(for: FileManagerVC.self).bundlePath)/FileManager_Swift")
         debugFM("FileManager_Swift/Assets/\(name).xcassets/\(name)")
 

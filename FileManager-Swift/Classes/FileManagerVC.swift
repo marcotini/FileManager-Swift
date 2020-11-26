@@ -115,7 +115,7 @@ public class FileManagerVC: UIViewController {
     
     @IBAction func deleteFilesPressed(_ sender: Any){
         
-        AlertDismiss(t: "Deleting Files", msg: "Are you sure you wanna delete this files") { [unowned self] _  in
+        AlertDismiss(t: "Deleting Files", msg: "Are you sure you wanna delete this files") {
             
             debugFM("User tapped yes delete")
             
@@ -289,7 +289,7 @@ extension FileManagerVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     }*/
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(14, 20, 14, 20)
+        return UIEdgeInsets.init(top: 14, left: 20, bottom: 14, right: 20)
     }
 }
 
